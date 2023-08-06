@@ -34,31 +34,33 @@
     "viewsContainers": {
       "activitybar": [
         {
-          "id": "xTreeViewActivity",
+          "id": "x01TreeView",
           "title": "Simple Activity",
           "icon": "./assets/icon.svg"
         }
       ]
     },
     "views": {
-      "xTreeViewActivity": [
+      "x01TreeView": [
         {
-          "id": "xTreeViewActivity",
-          "name": "Simple Tree View",
-          "icon": "asset/icon.svg",
-          "contextualTitle": "Demo"
-        },
-        {
-          "id": "sProjectsExplorerFavorites",
-          "name": "Sample Project Manager Favorites"
+          "id": "x01Outline",
+          "name": "XNote Outile"
         }
       ]
     },
     "commands": [
       {
-        "command": "extension.s01HelloWorld",
-        "title": "Hello World"
+        "command": "x01Outline.renameNode",
+        "title": "Rename"
       }
-    ]
+    ],
+    "menus": {
+      "view/item/context": [
+        {
+          "command": "x01Outline.renameNode",
+          "when": "view == x01Outline"
+        }
+      ]
+    }
   }
 }

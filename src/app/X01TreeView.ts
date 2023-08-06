@@ -1,14 +1,14 @@
 // treeView.ts
 import * as vscode from 'vscode';
-import { TreeDataProvider } from './TreeDataProvider';
+import { X01OutlineProvider } from './X01OutlineProvider';
 
 export class TreeView implements vscode.Disposable {
   private treeView: vscode.TreeView<vscode.TreeItem>;
-  private treeDataProvider: TreeDataProvider;
+  private treeDataProvider: X01OutlineProvider;
 
-  constructor(context: vscode.ExtensionContext, treeDataProvider: TreeDataProvider) {
+  constructor(context: vscode.ExtensionContext, treeDataProvider: X01OutlineProvider) {
     this.treeDataProvider = treeDataProvider;
-    this.treeView = vscode.window.createTreeView('xTreeViewActivity', {
+    this.treeView = vscode.window.createTreeView('x01TreeView', {
       treeDataProvider: this.treeDataProvider
     });
 

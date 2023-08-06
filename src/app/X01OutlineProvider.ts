@@ -1,7 +1,7 @@
 // treeDataProvider.ts
 import * as vscode from 'vscode';
 
-export class TreeDataProvider implements vscode.TreeDataProvider<vscode.TreeItem> {
+export class X01OutlineProvider implements vscode.TreeDataProvider<vscode.TreeItem> {
   getTreeItem(element: vscode.TreeItem): vscode.TreeItem {
     return element;
   }
@@ -23,4 +23,5 @@ export class TreeDataProvider implements vscode.TreeDataProvider<vscode.TreeItem
 
     return item;
   }
+  rename(offset: number): void {}
 }
