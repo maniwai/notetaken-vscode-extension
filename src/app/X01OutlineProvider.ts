@@ -9,7 +9,9 @@ export class X01OutlineProvider implements vscode.TreeDataProvider<vscode.TreeIt
   getChildren(element?: vscode.TreeItem): Thenable<vscode.TreeItem[]> {
     if (!element) {
       // Top level items
-      return Promise.resolve([this.getHelloItem('Hello,', 'string.svg'), this.getHelloItem('World!', 'string.svg')]);
+      return Promise.resolve([
+        this.getHelloItem('Hello,', 'string.svg'),        this.getHelloItem('World!', 'string.svg'),
+      ]);
     } else {
       // Child items (if any)
       return Promise.resolve([]);
